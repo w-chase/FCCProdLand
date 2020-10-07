@@ -1,0 +1,374 @@
+*{
+    font-size: 18px;
+    font-family: 'Caveat', cursive;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+ input[type=submit]{
+     cursor:pointer;
+ }
+
+.DISCLAIMER-TOP{
+    background-color:rgba(255, 0, 0, 0.75);
+    height:fit-content;
+    font-size:1.5rem;
+    font-weight:bold;
+    text-align: center;
+    position: sticky;
+    top:0;
+}
+.DISCLAIMER-BOTTOM{
+    background-color:rgba(255, 0, 0, 0.75);
+    height:fit-content;
+    font-size:1.125rem;
+    text-align: center;   
+}
+
+.heading1{
+    font-size: 4rem;
+    font-family: "Caveat";
+    margin: 0;
+    text-align: center;    
+}
+.heading2{
+    font-size: 2.75rem;
+    font-family: "Caveat";
+    margin-left: 20%;
+}
+#header-image:hover{
+    cursor: pointer;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color:rgba(255,255,255,0.6);
+    opacity: 1;
+    
+}
+
+.title{
+    display:grid;
+    grid-template-columns: minmax(25%, 300px) 75%;
+    align-items: center;
+}
+
+
+#nav-bar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-link{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.nav-link:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.description-area{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "heading heading"
+    "text video";
+    margin:2rem;
+}
+
+#description-title{
+    grid-area: heading;
+}
+.description-text{
+    grid-area: text;
+    
+}
+
+.review-video{
+    grid-area: video;
+}
+
+iframe{
+    height: 100%;
+    width: 100%;
+    
+
+}
+#home{
+    padding: 1rem;
+    
+    
+}
+#about{
+    padding:1rem;
+    width:80%;
+    margin-left:10%;
+}
+.product-info{
+    display: grid;
+    grid-template-areas: 
+    "image title"
+    "image table";
+    grid-template-columns: 1fr 5fr;
+}
+.product-image{
+    height: 10rem;
+    grid-area: image;
+    align-self: center;
+}
+.product-info-table{
+    grid-area: table;
+}
+.product-title{
+    grid-area: title;
+    margin:5%
+}
+.product-info-table th, td{
+    text-align: center; 
+}
+th,td{
+    border-bottom: 3px solid #333;
+
+    border-collapse: collapse;
+    max-width: 20rem;
+}
+
+#order-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . .";
+    justify-items: left;
+    align-items: center;
+    justify-content:center;
+    width: 70%;
+    margin-left:20%;
+    border: 2px solid #333;
+    border-radius:5px;
+}
+#label-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: .70fr 1fr;
+    
+}#address{
+    width:90%;
+    resize: none;
+}
+
+#qty{
+    width:6rem;
+}
+
+#form{
+    display:grid;
+    grid-template-areas: 
+    "email topic"
+    "message message"
+    "submit submit";
+    border: 2px solid #333;
+    border-radius:5px;
+    width: 50%;
+    margin-left: 30%;
+    justify-items: left;
+    align-items: center;
+}
+
+#submit{
+    grid-area: submit;
+    justify-self: center;
+}
+#message-box{
+    grid-area:message;
+    display:grid;
+    grid-template-columns: 0.3fr 1fr;
+    width:100%;
+    align-items: center;
+    justify-items:right
+
+}
+form > div,input{
+    margin:0.25rem;
+}
+#message{
+    width: 75%;
+    margin-right:5%;
+    resize:none;
+}
+#topic{
+    grid-area: topic;
+
+}
+#email{
+    grid-area:email;
+}
+#contact{
+    padding:1rem;
+}
+form > div > label{
+    margin:0.25rem;
+}
+
+.product-info-table-vertical{
+    grid-area: table;
+    display:none;
+
+}
+
+@media only screen and (max-width:1200px){
+    *{
+        font-size: 17px;
+    }
+    #home{
+        width: 100%;
+    }
+    #about{
+        margin-left: 0%;
+    }
+    #order-form, #contact-form{
+        margin-left:12%;
+    }
+    iframe{
+        height:50%
+    }
+}
+@media only screen and (max-width:1024px){
+    *{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:900px){
+    *{font-size: 14px;}
+    .heading1{
+        font-size: 4.5rem;
+    }
+    .heading2{
+        font-size: 4rem;
+    }
+    #header-img{
+        width:75%;
+    }
+    #about{
+        width:100%;
+    }
+    .DISCLAIMER-TOP{
+        font-size:1.25rem;
+
+    }
+    .product-image{
+        height:15rem;
+    }
+    #order-form, #contact-form{
+        margin-left:0%;
+        margin-right:0%;
+        width:100%;
+    }
+    .description-area{
+        grid-template-areas:
+        "heading"
+        "text"
+        "video";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+    }
+    .review-video{
+        justify-self: center;
+    }
+    iframe{
+        width:100%;
+    }
+    .product-info-table{
+        display: none;
+    }
+    .product-info-table-vertical{
+        grid-area: table;
+        display:initial;
+    
+    }
+    .product-info{
+        display: grid;
+        grid-template-areas:
+        "image" 
+        "title"
+        "table";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr auto;
+        justify-items: center;
+        margin-bottom: 1.5rem;
+    }
+@media only screen and (max-width:700px){
+    #form{
+        width:100%;
+        margin-left:0%
+    }
+    #order-form{
+        grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". ." ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:repeat(5, auto)
+    } 
+}
+@media only screen and (max-width:400px){
+    *{
+    font-size: 13px;
+    }
+}
+
+    
+}
